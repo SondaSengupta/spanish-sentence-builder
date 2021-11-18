@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class='flag' alt="Vue logo" src="./assets/flag.jpeg">
+    <h1 class='title'>Spanish Sentence Builder</h1>
+    <SpeechPart label="Person" :partList="personList"/>
+    <SpeechPart label="Verb" :partList="verbList"/>
+    <SpeechPart label="Place" :partList="placeList"/>
+    <SpeechPart label="Time" :partList="timeList"/>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SpeechPart from './components/SpeechPart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SpeechPart
+  },
+  data: function(){
+    return {
+      personList: ['I', 'You', 'He', 'We'],
+      verbList: ['To Eat', 'To Live', 'To Go', 'To Speak'],
+      placeList: ['Restaurant', 'Library', 'Theatre', 'Cinema'],
+      timeList: ['Present', 'Past', 'Future']
+    }
   }
 }
 </script>
@@ -21,8 +34,12 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px;
 }
+
+.flag {
+  width: 300px;  
+}
+
 </style>
