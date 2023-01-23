@@ -21,7 +21,7 @@ export default {
   data: function(){
     return {
       personList: ['I', 'You', 'He', 'We'],
-      verbList: ['To Eat', 'To Live', 'To Go', 'To Speak'],
+      verbList: ['To Eat', 'To Live', 'To Go', 'To Speak', 'To Understand'],
       placeList: ['Restaurant', 'Library', 'Theatre', 'Cinema'],
       timeList: ['Present', 'Past', 'Future']
     }
